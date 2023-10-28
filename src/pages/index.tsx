@@ -1,6 +1,9 @@
-export default function TodoListPage() {
-  return <h1>Index</h1>;
-}
+import { TodoListTemplate } from "@/components/Templates/TodoListTemplate";
+import { NextPage } from "next";
+
+const TodoListPage: NextPage = () => <TodoListTemplate />;
+
+export default TodoListPage;
 
 // http://localhost:3001/
 // http://localhost:3001/todo/create

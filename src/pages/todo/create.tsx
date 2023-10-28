@@ -1,3 +1,6 @@
-export default function CreatePage() {
-  return <h1>Create</h1>;
-}
+import { TodoCreateTemplate } from "@/components/Templates/TodoCreateTemplate";
+import { NextPage } from "next";
+
+const TodoCreatePage: NextPage = () => <TodoCreateTemplate />;
+
+export default TodoCreatePage;

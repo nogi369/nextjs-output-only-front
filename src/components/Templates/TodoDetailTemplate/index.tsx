@@ -10,8 +10,9 @@ export const TodoDetailTemplate = () => {
   // グローバルstate取得
   const { originTodoList } = useTodoContext();
   // Todo定義
-  const { id } = router.query;
-  const todo = originTodoList.find((todo) => String(todo.id) === id);
+  const todo = originTodoList.find(
+    (todo) => String(todo.id) === router?.query?.id
+  );
 
   // disabled : https://www.delftstack.com/ja/howto/react/disable-button-in-react/
   return (

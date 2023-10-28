@@ -4,7 +4,7 @@ import { EventType } from "../../../interfaces/Event";
 import { useRouter } from "next/router";
 
 // paramsの型定義
-type Params = {
+type Param = {
   addTodo: (title: string, content: string) => void;
 };
 
@@ -21,7 +21,7 @@ type ActionsType = {
   handleCreateTodo: EventType["onSubmit"];
 };
 
-export const useTodoCreateTemplate = ({ addTodo }: Params) => {
+export const useTodoCreateTemplate = ({ addTodo }: Param) => {
   const router = useRouter();
   // local state
   const [inputTitle, setInputTitle] = useState("");

@@ -24,12 +24,10 @@ type ActionsType = {
 export const useTodoEditTemplate = ({ originTodoList, updateTodo }: Params) => {
   // 画面遷移操作を実現
   const router = useRouter();
-  // id定義
-  const { id } = router.query;
   // メモ化
   const todo = useMemo(
-    () => originTodoList.find((todo) => String(todo.id) === id),
-    [id, originTodoList]
+    () => originTodoList.find((todo) => String(todo.id) === router?.query?.id),
+    [originTodoList, router?.query?.id]
   );
 
   // local state
